@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>圖片文字分析</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>📷 圖片文字分析</h1>
+  <p class="subtitle">框選圖片文字，協助閱讀障礙者理解內容</p>
+
+  <!-- 選圖與框選 -->
+  <div class="card">
+    <h2>① 選擇圖片並框選文字</h2>
+    <input type="file" id="imageInput">
+
+    <div class="canvas-wrapper">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <button class="primary-btn" onclick="sendCrop()">讀取選取文字</button>
+  </div>
+
+  <!-- 即時結果 -->
+  <div class="card">
+    <h2>② 辨識結果</h2>
+
+    <div class="result-block">
+      <div class="result-title">
+        <span>辨識到的文字</span>
+        <button class="voice-btn" onclick="playOcrAudio()">🔊</button>
+      </div>
+      <div id="ocrText" class="result-text"></div>
+    </div>
+
+    <div class="result-block">
+      <div class="result-title">
+        <span>文字解釋</span>
+        <button class="voice-btn" onclick="playExplainAudio()">🔊</button>
+      </div>
+      <div id="explanation" class="result-text"></div>
+    </div>
+  </div>
+
+  <!-- 歷史紀錄 -->
+  <div class="card">
+    <h2>③ 歷史紀錄</h2>
+    <p class="hint">點擊語音圖示可再次播放</p>
+
+    <div id="historyList" class="history-list">
+      <p class="empty">尚無紀錄</p>
+    </div>
+  </div>
+</div>
+
+<audio id="audio"></audio>
+<script src="script.js"></script>
+</body>
+</html>

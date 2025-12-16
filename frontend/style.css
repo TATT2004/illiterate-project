@@ -1,0 +1,105 @@
+body {
+  font-family: "Segoe UI", "Noto Sans TC", Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 720px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.canvas-wrapper {
+  overflow-x: auto;
+}
+
+canvas {
+  border: 2px dashed #bbb;
+  max-width: 100%;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #357ac8;
+}
+
+.result-title,
+.history-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.result-text,
+.history-text {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+.voice-btn,
+.small-voice-btn {
+  background: #eef3fb;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.voice-btn {
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+}
+
+.small-voice-btn {
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+}
+
+.history-item {
+  margin-bottom: 12px;
+}
+
+.empty {
+  color: #999;
+  text-align: center;
+}
+
+.hint {
+  font-size: 13px;
+  color: #777;
+}
